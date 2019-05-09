@@ -96,7 +96,7 @@ header {
     /*border: 3px solid red;*/
 }
 
-@media( max-width: 400px){
+@media( max-width: 500px){
     header{
         flex-flow: column-reverse;
     }
@@ -111,7 +111,7 @@ header nav {
     /* padding: 10px; */
 }
 
-@media( max-width: 400px){
+@media( max-width: 500px){
     header nav{
         flex-flow: column;
     }
@@ -206,7 +206,7 @@ footer{
 }
 
 .lrgImg {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     width: 40%;
     height: 100%;
     padding: 3% 0;
@@ -218,10 +218,13 @@ footer{
      */
     }
 
+
+
 .midBlock {
     width: 100%;
     height: 342px;
     margin-bottom: 4%;
+    padding-top: 5%;
     }
 
 .middle-img {
@@ -327,6 +330,7 @@ ul li{
     height: auto;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding-bottom: 5%;
 }
 
 .parentContainerNoWrap{
@@ -351,6 +355,7 @@ ul li{
     height: 100%;
     justify-content: center;
     justify-items: center;
+    padding-top: 5%;
 }
 
 .child{
@@ -365,7 +370,8 @@ ul li{
     width: 50%;
 }
 .child2{
-    margin: auto;
+    margin: 0 auto;
+    padding: 1.5% 0;
     flex-direction: column;
 }
 

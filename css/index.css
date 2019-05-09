@@ -140,7 +140,11 @@ header nav img{
     float: left;
 }
 footer{
+    /* background-color: aqua; */
+    /* display: flex; */
     text-align: center;
+    margin: 0 auto;
+    padding: 0 30%; 
 }
 
 .logo {
@@ -201,10 +205,11 @@ footer{
     margin-bottom: 5%;
 }
 
-.topBlock {
-    width: 35%;
-    height: auto;
-    padding: 1.5% 0;
+.lrgImg {
+    background-color: blueviolet;
+    width: 40%;
+    height: 100%;
+    padding: 3% 0;
     /* 
     width: 40%;
     height: 342px;
@@ -218,6 +223,10 @@ footer{
     height: 342px;
     margin-bottom: 4%;
     }
+
+.middle-img {
+    width: 100%;
+}
 
 .borderTopBlack{
     border-top: 1px solid black;
@@ -297,6 +306,7 @@ h1 {
     display: inline-block;
     width: 40%;
     height: 50%;
+    margin: 0 auto;
 }
 
 .column{
@@ -375,6 +385,11 @@ ul li{
 
 .services-header-img{
     width: 100%;
+}
+
+address{
+    display: flex;
+    /* background-color: pink; */
 }
 
 /* Responsive code and media inquiries below here! */

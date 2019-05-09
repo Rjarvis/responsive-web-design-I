@@ -80,9 +80,14 @@ header {
     /*border: 3px solid red;*/
     padding: 1%;
 }
+
 .wrapper {
-    width: 876px;
-    height: 562px;
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: left;
+    flex-wrap: wrap;
     /*border: 3px solid blue;*/
 }
 
@@ -175,10 +180,15 @@ footer{
 }
 
 .topBlock {
+    width: 35%;
+    height: auto;
+    padding: 1.5% 0;
+    /* 
     width: 40%;
     height: 342px;
-    /*border: 3px solid red; comment out after debugging*/
+    border: 3px solid red; comment out after debugging
     float: left;
+     */
     }
 
 .midBlock {
@@ -282,7 +292,7 @@ ul li{
 .parentContainer{
     display: flex;
     width: 100%;
-    height: 80%;
+    height: auto;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -305,7 +315,7 @@ ul li{
 .parentContainerColumn{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     height: 100%;
     justify-content: center;
     justify-items: center;
@@ -313,6 +323,10 @@ ul li{
 
 .child{
     margin: auto;
+}
+
+.childLogo{
+    float: left;
 }
 
 .child50Cent{
@@ -340,3 +354,5 @@ ul li{
 .services-header-img{
     width: 100%;
 }
+
+/* Responsive code and media inquiries below here! */

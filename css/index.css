@@ -102,16 +102,17 @@ header {
     }
 }
 header nav {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     display: flex;
     justify-content: space-around;
+    padding: 5vw;
     align-items: center;
 /*    display: inline-block;*/
     /* height: 50px; */
     /* padding: 10px; */
 }
 
-@media( max-width: 400px){
+@media( max-width: 500px){
     header nav{
         flex-flow: column;
     }
@@ -148,7 +149,7 @@ footer{
 }
 
 .logo {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     float: right;
     padding: inherit;
 }
@@ -380,6 +381,12 @@ ul li{
     justify-content: center;
     justify-items: center;
     padding-top: 5%;
+}
+
+@media( max-width: 800px){
+    .parentContainerColumn{
+        margin: 0 auto;
+    }
 }
 
 .child{

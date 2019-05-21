@@ -1,3 +1,436 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+html{
+    --blockWidth: 80%;
+    --blockHeight: 80%;
+    --marginPercentage: 10%;
+    --marginPushPercentage: 5%;
+    --paddingPercentage: 5%;
+    --buttonWidth: 40%; 
+    --buttonHeight: 10%;
+    --columnWidth: 33%;
+    --columnHeight: 50%;
+}
 
 
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    /*border: 3px solid blue;*/
+}
+
+header {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2%;
+    /*border: 3px solid red;*/
+}
+
+@media( max-width: 800px){
+    header{
+        flex-flow: column-reverse;
+    }
+}
+header nav {
+    /* border: 3px solid green; */
+    display: flex;
+    justify-content: space-around;
+    padding: 5vw;
+    align-items: center;
+/*    display: inline-block;*/
+    /* height: 50px; */
+    /* padding: 10px; */
+}
+
+@media( max-width: 500px){
+    header nav{
+        flex-flow: column;
+    }
+}
+
+header nav a {
+        /*border: 3px solid red;*/
+        /*padding: inherit;*/
+        color: rgb(105, 105, 105);
+		/*display: inline-block;*/
+		padding: 0.5%;
+        text-decoration: none;
+        /* justify-content: space-around; */
+
+    }
+
+header nav a:hover {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    transition-duration: 1.5s;
+
+}
+
+header nav img{
+    float: left;
+}
+footer{
+    /* background-color: aqua; */
+    /* display: flex; */
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 30%; 
+}
+
+.logo {
+    /* border: 3px solid green; */
+    float: right;
+    padding: inherit;
+}
+
+.blockWidth100Cent{
+    width: 100%;
+}
+.blockHeight{
+    height: var(--blockHeight);
+}
+
+.blockHeight80Cent{
+    height: 80%;
+}
+
+.callToAction{
+    color: black;
+    font-size: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid black;
+    width: 40%;
+    height: 10%;
+}
+
+.centerHorizontalUsingMargin{
+    margin-left: var(--marginPercentage);
+    margin-right: var(--marginPercentage);
+}
+
+.centerHorizontalUsingMargin10Cent{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.marginPushFromTop50Cent{
+    margin-top: 50%;
+}
+
+.marginPushFromTop20Cent{
+    margin-top: 20%;
+}
+
+.marginPushFromLeft{
+    margin-left: var(--marginPushPercentage);
+}
+
+.marginPushFromBottom{
+    margin-bottom: var(--marginPushPercentage);
+}
+
+.marginPushFromBottom5Cent{
+    margin-bottom: 5%;
+}
+
+.lrgImg {
+    /* background-color: blueviolet; */
+    width: 40%;
+    height: 100%;
+    padding: 3% 0;
+    /* 
+    width: 40%;
+    height: 342px;
+    border: 3px solid red; comment out after debugging
+    float: left;
+     */
+    }
+
+@media( max-width: 800px){
+    .lrgImg{
+        width: 0%;
+        height: 0%;
+        padding: 0%;
+    }
+}
+
+
+.midBlock {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 342px;
+    margin-bottom: 4%;
+    padding-top: 5%;
+    }
+
+@media( max-width: 500px){
+    .midBlock{
+        background-color: aqua;
+        flex-flow: column;
+        justify-content: none;
+    }
+}
+
+.middle-img {
+    width: 100%;
+}
+
+.borderTopBlack{
+    border-top: 1px solid black;
+}
+
+.borderBottomBlack{
+    border-bottom: 1px solid black;
+}
+
+h1 {
+    font-size: inherit;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.paddingPush{
+    padding: var(--paddingPercentage);
+}
+
+.paddingPush5Cent{
+    padding: 5%;
+}
+.paddingPush50Cent{
+    padding: 50%;
+}
+
+.paddingPushTopBottom{
+    padding-top: var(--paddingPercentage);
+    padding-bottom: var(--paddingPercentage);
+}
+
+.paddingPushTopBottom5Cent{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.paddingPushTopBottom2Cent{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.paddingPushFromTop{
+    padding-top: var(--paddingPercentage);
+}
+
+.paddingPushFromTop5Cent{
+    padding-top: 5%;
+}
+
+.paddingPushFromTop10Cent{
+    padding-top: 10%;
+}
+
+.paddingPushFromTop20Cent{
+    padding-top: 20%;
+}
+
+.paddingPushFromBottom{
+    padding-bottom: var(--paddingPercentage);
+}
+
+.paddingPushFromBottom5Cent{
+    padding-bottom: 5%;
+}
+
+.paddingPushFromBottom10Cent{
+    padding-bottom: 10%;
+}
+
+.paddingPushFromBottom20Cent{
+    padding-bottom: 20%;
+}
+
+.columnX2{
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+@media( max-width: 500px){
+    .columnX2{
+        width: 100%;
+    }   
+}
+
+.column{
+    display: inline-block;
+    width: var(--columnWidth);
+    height: var(--columnHeight);
+}
+
+ul li{
+    list-style: square;
+    list-style-position: inside;
+}
+
+/*  New CSS code.  Now with Flexbox!*/
+.parentContainer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+}
+
+.parentContainerNoWrap{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.parentContainer10CentHeight{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.parentContainerColumn{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 5%;
+}
+
+@media( max-width: 800px){
+    .parentContainerColumn{
+        margin: 0 auto;
+    }
+}
+
+.child{
+    margin: auto;
+}
+
+.childLogo{
+    float: left;
+}
+
+.child50Cent{
+    width: 50%;
+}
+.child2{
+    width: auto;
+    margin: 0 auto;
+    padding: 1.5% 0;
+    flex-direction: column;
+    font-size: 10vw;
+}
+
+
+
+.buttonChild{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.childBox{
+    width: 30%;
+    margin: 1%;
+    padding: 2%;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.services-header-img{
+    width: 100%;
+}
+
+address{
+    display: flex;
+    /* background-color: pink; */
+}
+
+/* Responsive code and media inquiries below here! */
